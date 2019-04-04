@@ -1,0 +1,14 @@
+<h1>RESULTS</h1>
+
+<ul>
+    <% parseData["Search"].forEach(function(movie) { %> <!-- Anything within <% %> is considered as regular Javascript -->
+        <li>
+            <%= movie["Title"] %> - <%= movie["Year"] %> <!-- = is used when we want to display --> 
+        </li>
+    <% }); %>
+</ul>
+
+
+
+
+<a href="/">Search again!</a>
