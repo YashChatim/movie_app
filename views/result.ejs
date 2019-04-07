@@ -1,12 +1,19 @@
 <h1>RESULTS</h1>
 
-<ul>
-    <% parseData["Search"].forEach(function(movie) { %> <!-- Anything within <% %> is considered as regular Javascript -->
-        <li>
-            <%= movie["Title"] %> - <%= movie["Year"] %> <!-- = is used when we want to display --> 
-        </li>
-    <% }); %>
-</ul>
+<div>
+    <ul>
+        <% parseData["Search"].forEach(function(movie) { %> <!-- Anything within <% %> is considered as regular Javascript -->
+            <li>
+                <%= "Movie: " + movie["Title"] %><br>
+                <%= "Year: " + movie["Year"] %><br>
+                <%= "Type: " + movie["Type"] %><br>
+                <%= "Image: " %> <a href="<%= movie["Poster"] %>">Image</a><br> <!-- = is used when we want to display -->
+                <br>
+            </li>
+        <% }); %>
+    </ul>
+</div>
+
 
 
 
