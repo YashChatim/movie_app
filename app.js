@@ -3,6 +3,8 @@ const app = express();
 const request = require("request");
 
 
+app.use(express.static(__dirname + "/public")); // __dirname - directory where script was run
+
 app.get("/", function(req, res) {
    res.render("search.ejs"); // res.render() helps to send content of the files
 });
