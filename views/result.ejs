@@ -1,7 +1,9 @@
 <% include ./partials/header %>
 
-<h1>RESULTS</h1>
-        
+<div class="heading text">
+    <h1>Movie Results</h1>
+</div>
+
 <div class="movie-results">
         <% parseData["Search"].forEach(function(movie) { %> <!-- Anything within <% %> is considered as regular Javascript -->
             <div class="col-md-2">
@@ -15,6 +17,8 @@
         <% }); %>
 </div>
 
-<a class="btn btn-primary" href="/">Search again!</a>
+<div class="search-again">
+    <a class="btn btn-primary" href="/">Search again!</a>
+</div>
 
 <% include ./partials/footer %>
