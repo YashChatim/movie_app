@@ -4,10 +4,10 @@
         
 <div class="movie-results">
         <% parseData["Search"].forEach(function(movie) { %> <!-- Anything within <% %> is considered as regular Javascript -->
-            <div class="col-md-3">
+            <div class="col-md-2">
                 <div class="well text-center">
                     <img src="<%= movie["Poster"] %>">
-                    <h5><%= "Movie: " + movie["Title"] %></h5>
+                    <h5><%= movie["Title"] %></h5>
                     <h5><%= "Year: " + movie["Year"] %></h5>
                     <h5><%= "Type: " + movie["Type"] %></h5> <!-- = is used when we want to display -->
                 </div>
