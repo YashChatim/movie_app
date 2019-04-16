@@ -1,2 +1,11 @@
 .movie-results {
-  color: yellow; }
+  color: blue; }
+
+img {
+  width: 100%; }
+
+@media (min-width: 960px) {
+  .col-md-2 .well {
+    height: 400px; }
+  .col-md-2 img {
+    height: 250px; } }

@@ -1,3 +1,20 @@
 .movie-results {
-    color: lightblue;
+    color: blue;
+    
+}
+
+img {
+    width: 100%;
+}
+
+@media(min-width: 960px) {
+    .col-md-3 {
+        .well {
+            height: 400px;
+        }
+        
+        img {
+            height: 250px;
+        }
+    }
 }
