@@ -3,19 +3,18 @@
 <h1>RESULTS</h1>
         
 <div class="movie-results">
-    <ul>
         <% parseData["Search"].forEach(function(movie) { %> <!-- Anything within <% %> is considered as regular Javascript -->
-            <li>
-                <%= "Movie: " + movie["Title"] %><br>
-                <%= "Year: " + movie["Year"] %><br>
-                <%= "Type: " + movie["Type"] %><br>
-                <%= "Image: " %> <a href="<%= movie["Poster"] %>">Image</a><br> <!-- = is used when we want to display -->
-                <br>
-            </li>
+            <div class="col-md-3">
+                <div class="well text-center">
+                    <img src="<%= movie["Poster"] %>">
+                    <h5><%= "Movie: " + movie["Title"] %></h5>
+                    <h5><%= "Year: " + movie["Year"] %></h5>
+                    <h5><%= "Type: " + movie["Type"] %></h5> <!-- = is used when we want to display -->
+                </div>
+            </div>
         <% }); %>
-    </ul>
 </div>
 
-<a href="/">Search again!</a>
+<a class="btn btn-primary" href="/">Search again!</a>
 
 <% include ./partials/footer %>
