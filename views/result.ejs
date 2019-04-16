@@ -1,29 +1,21 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <titl>YMDB</titl>
-        <link rel="stylesheet" href="/stylesheets/main.css">
-    </head>
-    
-    <body>
-        <h1>RESULTS</h1>
+<% include ./partials/header %>
+
+<h1>RESULTS</h1>
         
-        <div class="movie-results">
-            <ul>
-                <% parseData["Search"].forEach(function(movie) { %> <!-- Anything within <% %> is considered as regular Javascript -->
-                    <li>
-                        <%= "Movie: " + movie["Title"] %><br>
-                        <%= "Year: " + movie["Year"] %><br>
-                        <%= "Type: " + movie["Type"] %><br>
-                        <%= "Image: " %> <a href="<%= movie["Poster"] %>">Image</a><br> <!-- = is used when we want to display -->
-                        <br>
-                    </li>
-                <% }); %>
-            </ul>
-        </div>
-        
-    </body>
-    
-</html>
+<div class="movie-results">
+    <ul>
+        <% parseData["Search"].forEach(function(movie) { %> <!-- Anything within <% %> is considered as regular Javascript -->
+            <li>
+                <%= "Movie: " + movie["Title"] %><br>
+                <%= "Year: " + movie["Year"] %><br>
+                <%= "Type: " + movie["Type"] %><br>
+                <%= "Image: " %> <a href="<%= movie["Poster"] %>">Image</a><br> <!-- = is used when we want to display -->
+                <br>
+            </li>
+        <% }); %>
+    </ul>
+</div>
 
 <a href="/">Search again!</a>
+
+<% include ./partials/footer %>

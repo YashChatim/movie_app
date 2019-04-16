@@ -1,6 +1,10 @@
+<% include ./partials/header %>
+
 <h1>Search for a movie</h1>
 
 <form action="/results" method="GET"> <!-- redirects data to /results when submit is clicked-->
     <input type="text" placeholder="Enter a movie name" name="search"></input>
     <input type="submit"></input>
 </form>
+
+<% include ./partials/footer %>
